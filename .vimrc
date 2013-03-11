@@ -21,6 +21,9 @@
 
  function! s:NeoBundleIsNotInstalled()
    colorscheme desert
+   echomsg 'Not installed bundles : ' .
+         \ string(neobundle#get_not_installed_bundle_names())
+   echomsg 'Please execute ":NeoBundleInstall" command.'
  endfunction
  function! s:LoadBundles()
    " 以下に利用するリポジトリを記述
@@ -74,7 +77,7 @@
  set t_Co=256
  
  " I Love monokai!
- colorscheme monokai
+  colorscheme molokai
  
  
  "------------------------------------------------------------
